@@ -1,0 +1,5 @@
+class CallTrue{
+    constructor(){//construtor
+
+    }
+}

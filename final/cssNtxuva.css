@@ -1,0 +1,62 @@
+body{
+    color: rgb(255, 255, 255);
+    background: silver;
+    text-align: center;
+    background-color: #c4b9b9;
+    
+      
+}
+#fill{
+    width: 50px;
+    height: 30px;
+    background: rgb(204, 7, 7);
+    border-radius: 30px;
+
+}
+.qd1 {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(8, 178, 235);
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+}
+.qd2 {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+}
+#arena1{
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+#arena2{
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+#table{
+    border-radius: 30px;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(42, 184, 219);
+}
+#selected{
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 40px;
+}
+.bokbjdy{
+    text-align: center;
+    align-content: center;
+    background-color: #fff;
+    justify-content: center;
+}
