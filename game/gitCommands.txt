@@ -8,4 +8,6 @@ git push --set-upstream origin master //connect git to the browser
 
 authentication:
 git config --global user.email "wirziobaloi1234@gmail.com"
-git config --global user.name "Wirziogit"
+git config --global user.name "Wirzio"
+
+git remote set-url origin https://"url" to change repository link!
