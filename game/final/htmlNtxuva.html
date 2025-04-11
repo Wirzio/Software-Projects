@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssNtxuva.css">
+    <script src="jsNtxuva.js"></script>
+    <title>Ntxuva</title>
+    
+</head>
+<body class="body">
+    <h1>Game of death</h1>
+    <h3>Choose Category</h3>
+        <p>
+            <select name="selected" id="selected">
+                <option value="">4</option>
+                <option value="">7</option>
+                <option value="">10</option>
+                <option value="">16</option>
+                <option value="">22</option>
+            </select>
+        <button onclick="table()" name="table" id="table" >Start</button>
+        </p>
+    <label style="color: #000;">PLAYER 1: </label><input type="text" name="name1" id="name1" disabled style="text-align: left; color:rgb(255, 0, 0);  font-size: 20px"><br> 
+    <br>
+    <label style="color: black;">PLAY: </label><input type="number" name="pl1txt" id="pl1txt" min="1" max="44" required>
+    <button onclick="pl1()" id="pl1">go</button>
+    <div id="arena1"></div>
+    <div id="arena2"></div>
+    <label style="color: black;">PLAY: </label><input type="number" name="pl2txt" id="pl2txt" min="1" max="44" required>
+    <button onclick="pl2()" id="pl2">go</button><br>
+    <br>
+    <label style="color: black;">PLAYER 2: </label><input type="text" name="name2" id="name2" disabled style="text-align: right; color: rgb(255, 0, 0); font-size: 20px"><br>
+    <br>
+    <br>
+    <button onclick="reset()" id="reset">Reset</button>
+    <button onclick="pl2()">Play</button>
+</body>
+</html>

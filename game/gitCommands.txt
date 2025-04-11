@@ -1,0 +1,11 @@
+git init //starts local git
+git staus //which file is in local or in remote
+git add "name" add single file to git
+git add . //add all files to git
+git commit -m "comment" //add it to my accountgit remote add origin "link"
+git push --set //
+git push --set-upstream origin master //connect git to the browser
+
+authentication:
+git config --global user.email "wirziobaloi1234@gmail.com"
+git config --global user.name "Wirziogit"

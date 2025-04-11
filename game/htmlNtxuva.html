@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssNtxuva.css">
+    <script src="jsNtxuva.js"></script>
+    <title>Ntxuva</title>
+    
+</head>
+<body class="body">
+    <div class="header">
+        <h1>Game of death</h1>
+        <h3>Choose Category</h3>
+        <p>
+            <select name="selected" id="selected">
+                <option value="">4</option>
+                <option value="">7</option>
+                <option value="">10</option>
+                <option value="">16</option>
+                <option value="">22</option>
+            </select>
+        <button onclick="table()" name="table" id="table" >Start</button>
+        </p>
+    </div>
+    <div class="divCenter">
+        <br>
+        <div>
+            <button class="pl1" id="pl1">PLAYER 1</button>
+        </div>
+        <div>
+            <div id="arena1"></div>
+            <div id="arena2"></div>
+        </div>
+        <div>
+            <button class="pl2" id="pl2">PLAYER 2</button><br>
+        </div>
+        <br>
+    </div>
+    <div>
+        <button onclick="reset()" id="reset" class="buttonReset">Reset</button>
+    </div>
+        
+    
+    <br>
+    <br>
+</body>
+<br><br>
+<footer class="footer">copyright</footer>
+</html>

@@ -1,0 +1,92 @@
+body{
+    color: rgb(255, 255, 255);
+    background: silver;
+    text-align: center;
+    background-color: #c4b9b9;
+    
+      
+}
+#fill{
+    width: 50px;
+    height: 30px;
+    background: rgb(204, 7, 7);
+    border-radius: 30px;
+}
+.divArena{
+    display: flex;
+}
+.qd1 {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(8, 178, 235);
+    margin: 5px;
+    rotate: 180deg;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+}
+.qd2 {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+}
+#arena1{
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+#arena2{
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+#table{
+    border-radius: 30px;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(42, 184, 219);
+}
+#selected{
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 40px;
+}
+
+.divCenter{
+    display: grid;
+}
+button{
+    border-radius: 10px;
+}
+
+.buttonReset{
+    background-color: red;
+}
+
+.pl1{
+   rotate: 180deg;
+   position: relative;
+   left: 0;
+}
+
+.pl2{
+    align-items: right;
+    position: relative;
+    right: 0;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1b1c1d; /* Ajuste a cor conforme necessário */
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
