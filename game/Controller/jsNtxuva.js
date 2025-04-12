@@ -8,15 +8,70 @@ let bool = false //normal play or sula
 
 function go(){
     let s = new Start()
-    s.startTable()
+    s.table()
 }
 /********************************************************************************************************/
+
+function fill(){//fill spaces with array values
+    let r = new Reset()
+    let e = new Events()
+    r.clean()//calling function 'clean' to redefine background to avoid overlap
+    var div = parseInt(document.getElementById('selected').selectedIndex)
+    var w = ''
+
+    switch(div){
+        case 0:{
+            w = '240px'
+        }break
+        case 1:{
+            w = '420px'
+        }break
+        case 2:{
+            w = '600px'
+        }break
+        case 3:{
+            w = '960px'
+        }break
+        case 4:{
+            w = '1320px'
+        }break
+    }
+    var container1 = document.getElementById('arena1');
+    container1.style.width = w
+    var container2 = document.getElementById('arena2');
+    container2.style.width = w
+    for (var i = 0; i < arr1.length; i++) {
+        var qd1 = document.createElement("button");
+        qd1.className = "qd1";
+        if(i < arr1.length/2){
+            qd1.textContent = arr1[-1 - i + arr1.length];
+        }else{
+            qd1.textContent = arr1[i - arr1.length/2];
+        }
+        qd1.addEventListener('click', (event) => e.btnClick1(event))
+        container1.appendChild(qd1);
+    }
+
+    for (var i = 0; i < arr2.length; i++) {
+        var qd2 = document.createElement("button");
+        qd2.className = "qd2";
+        if(i < arr2.length/2){
+            qd2.textContent = arr2[arr2.length/2 - i - 1];
+        }else{
+            qd2.textContent = arr2[i];
+        }
+        qd2.addEventListener('click', (event) => e.btnClick2(event))
+        container2.appendChild(qd2);
+    }
+}
+
+/*******************************************************************************************************/
 class Start {
 
     constructor(){
     }
 
-    startTable(){//choose of table
+    table(){//choose of table
         var t = document.getElementById('selected').selectedIndex
         document.getElementById('go').disabled = true
         document.getElementById('selected').disabled = true
@@ -49,61 +104,6 @@ class Start {
         fill()
     }
 }
-/*******************************************************************************************************/
-
-
-function fill(){//fill spaces with array values
-    let r = new Reset()
-    let e = new Events()
-    r.clean()//calling function 'clean' to redefine background to avoid overlap
-    var div = parseInt(document.getElementById('selected').selectedIndex)
-    var w = ''
-
-    switch(div){
-        case 0:{
-        w = '240px'
-        }break
-        case 1:{
-        w = '420px'
-        }break
-        case 2:{
-        w = '600px'
-        }break
-        case 3:{
-        w = '960px'
-        }break
-        case 4:{
-        w = '1320px'
-        }break
-    }
-    var container1 = document.getElementById('arena1');
-    container1.style.width = w
-    var container2 = document.getElementById('arena2');
-    container2.style.width = w
-    for (var i = 0; i < arr1.length; i++) {
-        var qd1 = document.createElement("button");
-        qd1.className = "qd1";
-        if(i < arr1.length/2){
-            qd1.textContent = arr1[-1 - i + arr1.length];
-        }else{
-            qd1.textContent = arr1[i - arr1.length/2];
-        }
-        qd1.addEventListener('click', (event) => e.btnClick1(event))
-        container1.appendChild(qd1);
-    }
-
-    for (var i = 0; i < arr2.length; i++) {
-        var qd2 = document.createElement("button");
-        qd2.className = "qd2";
-        if(i < arr2.length/2){
-            qd2.textContent = arr2[arr2.length/2 - i - 1];
-        }else{
-            qd2.textContent = arr2[i];
-        }
-        qd2.addEventListener('click', (event) => e.btnClick2(event))
-        container2.appendChild(qd2);
-    }
-}
 
 
 /******************************************************************************************/
@@ -117,7 +117,7 @@ class Events {
     btnClick1(event){
         var buttonClicked = event.target;
         var b = Array.from(buttonClicked.parentNode.children).indexOf(buttonClicked);
-        if(bool){
+        if(bool && !document.getElementById('pl1').disabled){
             if(b < arr1.length/2){
                 b =  arr1.length -1 - b
                 if(arr1[b] != 0){
@@ -157,6 +157,7 @@ class Events {
             bool = false
             aux = 0
             if(!this.v.allFilled(arr1, b + 1)){
+
             }else{
                 var p = document.getElementById('selected').selectedIndex
                 document.getElementById('pl1').disabled
@@ -228,7 +229,7 @@ class Events {
     btnClick2(event){
         var buttonClicked = event.target;
         var b = Array.from(buttonClicked.parentNode.children).indexOf(buttonClicked);
-        if(bool){
+        if(bool && !document.getElementById('pl2').disabled){
             if(b < arr2.length/2){
                 b = arr2.length/2 - b - 1
                 if(arr2[b] != 0){
@@ -372,12 +373,6 @@ class CallTrue {
 
 }
 
-
-
-
-
-
-
 /*********************************************************************************/
 class Sula {
 
@@ -449,9 +444,11 @@ class Reset {
         arr1 = []
         arr2 = []
         document.getElementById('selected').disabled = false
-        document.getElementById('table').disabled = false
+        document.getElementById('go').disabled = false
         document.getElementById('pl1').disabled = false
         document.getElementById('pl2').disabled = false
+        document.getElementById('pl1').style.backgroundColor = '#ffffff'
+        document.getElementById('pl2').style.backgroundColor = '#ffffff'
         aux = 0
         bool = false
     }
