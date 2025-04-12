@@ -1,6 +1,5 @@
 
 
-
 var arr1 = []
 var arr2 = []
 let aux = 0 //sula count 
