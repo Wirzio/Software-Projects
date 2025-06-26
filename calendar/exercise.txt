@@ -1,0 +1,18 @@
+Conforme combinado envio o enunciado do exercício que deve ser realizado até domingo dia 15 às 23:59.
+
+Deve enviar no email o código que produzir (respondendo a todos no email):
+
+“Criar uma página web com o calendário de um mês onde é possível marcar os dias e guardar a informação dos dias marcados num ficheiro de texto e fazer a sua leitura sempre que a página carregar.”
+
+O código deve ser entregue pronto a ser colocado num servidor web, sem configurações ou compilações extra.
+
+Deve enviar a resolução em resposta a este email, pode incluir qualquer documentação que produzir.
+
+ Serão analisados os seguintes pontos:
+
+Legibilidade
+Funcionalidade
+Interface
+Simplicidade
+Comentários/Documentação
+Cumprimentos,
